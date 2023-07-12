@@ -207,7 +207,6 @@ namespace WebRedis.Controllers
                 DistributedCacheEntryOptions options = new DistributedCacheEntryOptions()
                     .SetAbsoluteExpiration(DateTime.Now.AddMinutes(5))
                     .SetSlidingExpiration(TimeSpan.FromMinutes(3));
-
                 // Add the data into the cache
                 await _cache.SetAsync(cacheKey, dataToCache, options);
             }
